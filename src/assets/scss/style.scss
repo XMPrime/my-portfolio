@@ -1,0 +1,177 @@
+/*********************************************************************************
+
+	Template Name: Trydo React Degital Agency Template
+	Note: This is style css.
+
+**********************************************************************************/
+
+/**************************************************************
+	
+	STYLESHEET INDEXING
+	|
+	|
+	|___ Default Styles
+	|	|
+	|	|___ variables
+	|	|___ mixins
+	|	|___ reset
+	|	|___ typography
+	|	|___ extend
+	|	|___ animations
+	|	|___ shortcode
+	|	|___ spacing
+	|
+	|
+	|___Header Styles
+	|	|___ header
+	|	|___ mainmenu
+	|
+	|
+	|___Inner Styles
+	|	|___ breadcrump 
+	|	|___ section-title 
+	|	|___ button
+	|	|___ pagination
+	|	|___ socialicon
+	|	|___ footer
+	|
+	|___Elements Styles
+	|	|___ portfolio 
+	|	|___ service 
+	|	|___ slider 
+	|	|___ counterup 
+	|	|___ testimonial 
+	|	|___ brand 
+	|	|___ team 
+	|	|___ callto-action 
+	|	|___ tab 
+	|	|___ accordion 
+	|	|___ list 
+	|	|___ contact 
+	|
+	|___BLog Styles
+	|	|___ blog 
+	|	|___ blog-details 
+	|
+	|___Template Styles
+	|	|___ about 
+	|	|___ portfolio-details
+	|	|___ service-details
+	|	|___ preview
+	|
+	|
+	|___ END STYLESHEET INDEXING
+
+***************************************************************/
+
+/**************************************
+    Default Styles
+***************************************/
+@import "default/variables";
+@import "default/mixins";
+@import "default/reset";
+@import "default/typography";
+@import "default/extend";
+@import "default/animations";
+@import "default/shortcode";
+@import "default/spacing";
+
+/**************************************
+    Header Styles
+***************************************/
+
+@import "header/header";
+@import "header/mainmenu";
+
+/**************************************
+    Inner Styles
+***************************************/
+
+@import "common/breadcrump";
+@import "common/section-title";
+@import "common/button";
+@import "common/pagination";
+@import "common/socialicon";
+@import "common/footer";
+
+/**************************************
+    Elements Styles
+***************************************/
+
+@import "elements/portfolio";
+@import "elements/service";
+@import "elements/slider";
+@import "elements/counterup";
+@import "elements/testimonial";
+@import "elements/brand";
+@import "elements/projects";
+@import "elements/callto-action";
+@import "elements/tab";
+@import "elements/accordion";
+@import "elements/list";
+@import "elements/contact";
+@import "elements/progress";
+@import "elements/column";
+@import "elements/404";
+@import "elements/pricing";
+
+/**************************************
+    Blog Styles
+***************************************/
+
+@import "blog/blog";
+@import "blog/blog-details";
+
+/**************************************
+    Template Styles
+***************************************/
+
+@import "template/about";
+@import "template/portfolio-details";
+@import "template/service-details";
+@import "template/dark-version";
+@import "template/preview";
+
+$bg-color: hsl(256, 33, 10);
+$dot-color: hsl(256, 33, 70);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
+body {
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+}
+
+.back {
+  z-index: 1;
+}
+
+.front {
+  margin-top: 5em;
+  z-index: 100;
+}
+
+.logo-1,
+.logo-2 {
+  font-size: 1.5rem;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: normal;
+  margin: 0 auto;
+  border: 2px solid;
+}
+
+.closeTrigger {
+  margin: 0 auto;
+}
