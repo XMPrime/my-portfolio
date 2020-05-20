@@ -9,7 +9,6 @@ import "./index.scss";
 function App() {
   return (
     <Router basename='/'>
-      {/* <HomeParticles /> */}
       <Switch>
         <Route exact path='/' component={HomeParticles} />
         <Route component={Error404} />
