@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
 
 const axios = require("axios");
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 export default class Contact extends Component {
   constructor(props) {
@@ -16,34 +21,46 @@ export default class Contact extends Component {
     };
   }
 
+  // formSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   this.setState({
+  //     buttonText: "...sending",
+  //   });
+
+  //   let data = {
+  //     name: this.state.name,
+  //     email: this.state.email,
+  //     subject: this.state.subject,
+  //     message: this.state.message,
+  //   };
+
+  //   axios
+  //     .post("/contact", data)
+  //     .then((res) => {
+  //       console.log("post request sent");
+  //       if (res.data.status === "success") {
+  //         console.log("Message Sent.");
+  //         // this.setState({ sent: true }, this.resetForm());
+  //       } else if (res.data.status === "fail") {
+  //         console.log("Message failed to send.");
+  //       }
+  //     })
+  //     .catch(() => {
+  //       console.log("Message not sent");
+  //     });
+  // };
+
   formSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
     e.preventDefault();
-
-    this.setState({
-      buttonText: "...sending",
-    });
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      subject: this.state.subject,
-      message: this.state.message,
-    };
-
-    axios
-      .post("/contact", data)
-      .then((res) => {
-        console.log("post request sent");
-        if (res.data.status === "success") {
-          console.log("Message Sent.");
-          // this.setState({ sent: true }, this.resetForm());
-        } else if (res.data.status === "fail") {
-          console.log("Message failed to send.");
-        }
-      })
-      .catch(() => {
-        console.log("Message not sent");
-      });
   };
 
   resetForm = () => {
