@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// React Required
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomeParticles from "./home/HomeParticles.jsx";
+import Error404 from "./elements/error404";
+
+import "./index.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename='/'>
+      {/* <HomeParticles /> */}
+      <Switch>
+        <Route exact path='/' component={HomeParticles} />
+        <Route component={Error404} />
+      </Switch>
+    </Router>
   );
 }
 
