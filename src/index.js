@@ -10,26 +10,24 @@ import "./index.scss";
 
 import HomeParticles from "./home/HomeParticles.jsx";
 
-import error404 from "./elements/error404";
+import Error404 from "./elements/error404";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 
 class Root extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
-          <Route
-            exact
-            path={`${process.env.PUBLIC_URL}/`}
-            component={HomeParticles}
-          />
-
-          <Route path={`${process.env.PUBLIC_URL}/404`} component={error404} />
-          <Route component={error404} />
+          <Route exact path={`${process.env.PUBLIC_URL}/`}>
+            <HomeParticles />
+          </Route>
+          <Route path={`${process.env.PUBLIC_URL}/404`}>
+            <Error404 />
+          </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }

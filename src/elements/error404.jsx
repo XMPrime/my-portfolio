@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../component/Header";
 
-class error404 extends Component {
+class Error404 extends Component {
   render() {
     return (
       <>
@@ -34,4 +34,4 @@ class error404 extends Component {
     );
   }
 }
-export default error404;
+export default Error404;
