@@ -57,7 +57,10 @@ export default class Contact extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => alert("Success!"))
+      .then((res) => {
+        alert("Success!");
+        console.log(res);
+      })
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -125,6 +128,7 @@ export default class Contact extends Component {
                     // action='/'
                     id='contact-form'
                     // method='post'
+                    name='contact'
                     onSubmit={(e) => this.formSubmit(e)}
                   >
                     <label htmlFor='name'>
