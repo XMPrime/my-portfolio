@@ -21,50 +21,50 @@ export default class Contact extends Component {
     };
   }
 
-  formSubmit = (e) => {
-    e.preventDefault();
-
-    this.setState({
-      buttonText: "...sending",
-    });
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      subject: this.state.subject,
-      message: this.state.message,
-    };
-
-    axios
-      .post("/contact", data)
-      .then((res) => {
-        console.log("post request sent");
-        if (res.data.status === "success") {
-          console.log("Message Sent.");
-          // this.setState({ sent: true }, this.resetForm());
-        } else if (res.data.status === "fail") {
-          console.log("Message failed to send.");
-        }
-      })
-      .catch(() => {
-        console.log("Message not sent");
-      });
-  };
-
   // formSubmit = (e) => {
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contact", ...this.state }),
-  //   })
-  //     .then((res) => {
-  //       alert("Success!");
-  //       console.log(res);
-  //     })
-  //     .catch((error) => alert(error));
-
   //   e.preventDefault();
+
+  //   this.setState({
+  //     buttonText: "...sending",
+  //   });
+
+  //   let data = {
+  //     name: this.state.name,
+  //     email: this.state.email,
+  //     subject: this.state.subject,
+  //     message: this.state.message,
+  //   };
+
+  //   axios
+  //     .post("/contact", data)
+  //     .then((res) => {
+  //       console.log("post request sent");
+  //       if (res.data.status === "success") {
+  //         console.log("Message Sent.");
+  //         // this.setState({ sent: true }, this.resetForm());
+  //       } else if (res.data.status === "fail") {
+  //         console.log("Message failed to send.");
+  //       }
+  //     })
+  //     .catch(() => {
+  //       console.log("Message not sent");
+  //     });
   // };
+
+  formSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then((res) => {
+        alert("Success!");
+        console.log(res);
+      })
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
 
   resetForm = () => {
     this.setState({
@@ -128,9 +128,16 @@ export default class Contact extends Component {
                     // action='/'
                     id='contact-form'
                     // method='post'
-                    name='contact'
+                    data-netlify='true'
+                    netlify-honeypot='bot-field'
+                    name='contact-form'
                     onSubmit={(e) => this.formSubmit(e)}
                   >
+                    <input
+                      name='form-name'
+                      value='contact-form'
+                      type='hidden'
+                    />
                     <label htmlFor='name'>
                       <input
                         type='text'
