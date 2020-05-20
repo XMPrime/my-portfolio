@@ -18,7 +18,7 @@ import * as serviceWorker from "./serviceWorker";
 class Root extends Component {
   render() {
     return (
-      <BrowserRouter basename={"/"}>
+      <BrowserRouter>
         <Switch>
           <Route
             exact
