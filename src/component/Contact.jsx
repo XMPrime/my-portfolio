@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
+import NetlifyForm from "react-netlify-form";
 
 const axios = require("axios");
 const encode = (data) => {
@@ -89,6 +90,59 @@ export default class Contact extends Component {
       { Social: <FaTwitter />, link: "https://twitter.com/" },
     ];
 
+    let formInputs = [
+      {
+        name: "name",
+        type: "text",
+        value: this.state.name,
+        placeholder: "Your Name *",
+      },
+      {
+        name: "email",
+        type: "email",
+        value: this.state.email,
+        placeholder: "Your email *",
+      },
+      {
+        name: "subject",
+        type: "text",
+        value: this.state.subject,
+        placeholder: "Write a Subject",
+      },
+      {
+        name: "message",
+        type: "text",
+        value: this.state.message,
+        placeholder: "Your message",
+      },
+    ].map((input) => (
+      <label htmlFor={input.name}>
+        <input
+          type={input.type}
+          name={input.name}
+          id={input.name}
+          value={input.value}
+          onChange={(e) => {
+            this.setState({ [`${input.name}`]: e.target.value });
+          }}
+          placeholder={input.placeholder}
+        />
+      </label>
+    ));
+
+    // <label htmlFor='email'>
+    //   <input
+    //     type='email'
+    //     name='email'
+    //     id='email'
+    //     value={this.state.email}
+    //     onChange={(e) => {
+    //       this.setState({ email: e.target.value });
+    //     }}
+    //     placeholder='Your email *'
+    //   />
+    // </label>;
+
     return (
       <div className='rn-contact-us ptb--120 bg_color--1' id='contact'>
         <div className='contact-form--1'>
@@ -124,7 +178,35 @@ export default class Contact extends Component {
                   </div>
                 </div>
                 <div className='form-wrapper'>
-                  <form
+                  <NetlifyForm name='Contact Form'>
+                    {({ loading, error, success }) => (
+                      <div>
+                        {loading && <div>Loading...</div>}
+                        {error && (
+                          <div>
+                            Your information was not sent. Please try again
+                            later.
+                          </div>
+                        )}
+                        {success && <div>Thank you for contacting us!</div>}
+                        {!loading && !success && (
+                          <div>
+                            {formInputs}
+                            <button
+                              className='rn-button-style--2 btn-solid'
+                              type='submit'
+                              value='submit'
+                              name='submit'
+                              id='mc-embedded-subscribe'
+                            >
+                              {this.state.buttonText}
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </NetlifyForm>
+                  {/* <form
                     // action='/'
                     id='contact-form'
                     // method='post'
@@ -197,7 +279,7 @@ export default class Contact extends Component {
                     >
                       {this.state.buttonText}
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </div>
               {/* <div className='col-lg-6 order-1 order-lg-2'>
