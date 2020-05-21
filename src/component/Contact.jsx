@@ -55,7 +55,7 @@ export default class Contact extends Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
+      body: encode({ "form-name": "contact-form", ...this.state }),
     })
       .then((res) => {
         alert("Success!");
