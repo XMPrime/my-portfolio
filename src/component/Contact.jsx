@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
+import ContactForm from "./ContactForm";
 
 const axios = require("axios");
 const encode = (data) => {
@@ -89,46 +90,6 @@ export default class Contact extends Component {
       { Social: <FaTwitter />, link: "https://twitter.com/" },
     ];
 
-    let formInputs = [
-      {
-        name: "name",
-        type: "text",
-        value: this.state.name,
-        placeholder: "Your Name *",
-      },
-      {
-        name: "email",
-        type: "email",
-        value: this.state.email,
-        placeholder: "Your email *",
-      },
-      {
-        name: "subject",
-        type: "text",
-        value: this.state.subject,
-        placeholder: "Write a Subject",
-      },
-      {
-        name: "message",
-        type: "text",
-        value: this.state.message,
-        placeholder: "Your message",
-      },
-    ].map((input) => (
-      <label htmlFor={input.name}>
-        <input
-          type={input.type}
-          name={input.name}
-          id={input.name}
-          value={input.value}
-          onChange={(e) => {
-            this.setState({ [`${input.name}`]: e.target.value });
-          }}
-          placeholder={input.placeholder}
-        />
-      </label>
-    ));
-
     return (
       <div className='rn-contact-us ptb--120 bg_color--1' id='contact'>
         <div className='contact-form--1'>
@@ -164,28 +125,7 @@ export default class Contact extends Component {
                   </div>
                 </div>
                 <div className='form-wrapper'>
-                  <form
-                    id='contact-form'
-                    method='post'
-                    name='contact-form'
-                    onSubmit={(e) => this.formSubmit(e)}
-                  >
-                    <input
-                      type='hidden'
-                      name='form-name'
-                      value='contact-form'
-                    />
-                    {formInputs}
-                    <button
-                      className='rn-button-style--2 btn-solid'
-                      type='submit'
-                      value='submit'
-                      name='submit'
-                      id='mc-embedded-subscribe'
-                    >
-                      {this.state.buttonText}
-                    </button>
-                  </form>
+                  <ContactForm />
                 </div>
               </div>
               {/* <div className='col-lg-6 order-1 order-lg-2'>
