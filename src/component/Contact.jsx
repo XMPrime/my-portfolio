@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
-import NetlifyForm from "react-netlify-form";
 
 const axios = require("axios");
 const encode = (data) => {
@@ -130,19 +129,6 @@ export default class Contact extends Component {
       </label>
     ));
 
-    // <label htmlFor='email'>
-    //   <input
-    //     type='email'
-    //     name='email'
-    //     id='email'
-    //     value={this.state.email}
-    //     onChange={(e) => {
-    //       this.setState({ email: e.target.value });
-    //     }}
-    //     placeholder='Your email *'
-    //   />
-    // </label>;
-
     return (
       <div className='rn-contact-us ptb--120 bg_color--1' id='contact'>
         <div className='contact-form--1'>
@@ -178,98 +164,18 @@ export default class Contact extends Component {
                   </div>
                 </div>
                 <div className='form-wrapper'>
-                  <NetlifyForm name='Contact Form'>
-                    {({ loading, error, success }) => (
-                      <div>
-                        {loading && <div>Loading...</div>}
-                        {error && (
-                          <div>
-                            Your information was not sent. Please try again
-                            later.
-                          </div>
-                        )}
-                        {success && <div>Thank you for contacting us!</div>}
-                        {!loading && !success && (
-                          <div>
-                            {formInputs}
-                            <button
-                              className='rn-button-style--2 btn-solid'
-                              type='submit'
-                              value='submit'
-                              name='submit'
-                              id='mc-embedded-subscribe'
-                            >
-                              {this.state.buttonText}
-                            </button>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </NetlifyForm>
-                  {/* <form
-                    // action='/'
+                  <form
                     id='contact-form'
-                    // method='post'
-                    data-netlify='true'
-                    netlify-honeypot='bot-field'
+                    method='post'
                     name='contact-form'
                     onSubmit={(e) => this.formSubmit(e)}
                   >
                     <input
+                      type='hidden'
                       name='form-name'
                       value='contact-form'
-                      type='hidden'
                     />
-                    <label htmlFor='name'>
-                      <input
-                        type='text'
-                        name='name'
-                        id='name'
-                        value={this.state.name}
-                        onChange={(e) => {
-                          this.setState({ name: e.target.value });
-                        }}
-                        placeholder='Your Name *'
-                      />
-                    </label>
-
-                    <label htmlFor='email'>
-                      <input
-                        type='email'
-                        name='email'
-                        id='email'
-                        value={this.state.email}
-                        onChange={(e) => {
-                          this.setState({ email: e.target.value });
-                        }}
-                        placeholder='Your email *'
-                      />
-                    </label>
-
-                    <label htmlFor='subject'>
-                      <input
-                        type='text'
-                        name='subject'
-                        id='subject'
-                        value={this.state.subject}
-                        onChange={(e) => {
-                          this.setState({ subject: e.target.value });
-                        }}
-                        placeholder='Write a Subject'
-                      />
-                    </label>
-                    <label htmlFor='message'>
-                      <textarea
-                        type='text'
-                        id='message'
-                        name='message'
-                        value={this.state.message}
-                        onChange={(e) => {
-                          this.setState({ message: e.target.value });
-                        }}
-                        placeholder='Your Message'
-                      />
-                    </label>
+                    {formInputs}
                     <button
                       className='rn-button-style--2 btn-solid'
                       type='submit'
@@ -279,7 +185,7 @@ export default class Contact extends Component {
                     >
                       {this.state.buttonText}
                     </button>
-                  </form> */}
+                  </form>
                 </div>
               </div>
               {/* <div className='col-lg-6 order-1 order-lg-2'>
