@@ -7,7 +7,7 @@ let ProjectsContent = [
   {
     image: d_and_d,
     title: "Responsive D&D Character Sheet",
-    url: "https://responsive-5e-character-sheet.herokuapp.com/",
+    url: "https://responsive-5e-character-sheet.netlify.app/",
     technologies: "React, Redux, JS, Axios",
     description: `Still a work in progress, but I am planning to expand it into
        a useable website where users can create accounts and save their 
@@ -16,7 +16,7 @@ let ProjectsContent = [
   {
     image: dance,
     title: "Dance Judge App",
-    url: "https://dance-judge-app.herokuapp.com/",
+    url: "https://dance-judge.netlify.app/",
     technologies: "React, Redux, JS, Axios",
     description: `A replication of a real world application by CoDa Dance Company designed for judges 
       critiquing dance performances.`,
