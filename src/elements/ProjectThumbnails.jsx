@@ -68,10 +68,11 @@ class ProjectThumbnails extends Component {
                   src={project.image}
                   alt={project.imgText}
                 />
+
+                <div className='content'>
+                  <h4 className='title img-text'>{project.imgText}</h4>
+                </div>
               </a>
-              <div className='content'>
-                <h4 className='title img-text'>{project.imgText}</h4>
-              </div>
             </div>
             <br />
             <div className='content'>
