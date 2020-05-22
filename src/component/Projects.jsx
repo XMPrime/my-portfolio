@@ -9,10 +9,7 @@ export default function Projects() {
           <div className='col-lg-6'>
             <div className='section-title service-style--3 text-left mb--25 mb_sm--0'>
               <h2 className='title'>Projects</h2>
-              <p>
-                Below are some projects that I
-                am quite proud of!
-              </p>
+              <p>Below are some projects that I am quite proud of!</p>
             </div>
           </div>
         </div>

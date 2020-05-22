@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
 import ContactForm from "./ContactForm";
 
-const axios = require("axios");
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))

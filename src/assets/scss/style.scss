@@ -175,3 +175,35 @@ body {
 .closeTrigger {
   margin: 0 auto;
 }
+
+.team {
+  margin-top: 1rem;
+  .img-text {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.content {
+  a {
+    // color: blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: #f9004d;
+    }
+  }
+  .title {
+    margin-bottom: 0;
+  }
+  .technologies {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .description {
+    line-height: normal;
+    font-size: 1rem;
+  }
+}
