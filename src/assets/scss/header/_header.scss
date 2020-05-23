@@ -163,7 +163,7 @@
     }
 
     .header-wrapper {
-      padding: 20px 0;
+      padding: 10px 0;
       transition: 0.3s;
       .logo {
         a {
@@ -243,7 +243,7 @@
       background: #ffffff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       .header-wrapper {
-        padding: 0px;
+        padding: 10px 0;
         a {
           &.rn-btn {
             color: $heading-color;
@@ -258,7 +258,6 @@
       .logo {
         a {
           h3 {
-            // height: 50px;
             &.logo-1 {
               display: none;
             }
@@ -278,6 +277,9 @@
           &.text-white {
             color: $heading-color !important;
           }
+          &.text-black {
+            color: $heading-color !important;
+          }
         }
       }
     }
@@ -287,6 +289,9 @@
     .humberger-menu {
       span {
         &.text-white {
+          color: $heading-color !important;
+        }
+        &.text-black {
           color: $heading-color !important;
         }
       }
