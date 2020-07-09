@@ -2,8 +2,25 @@ import React, { Component } from "react";
 // import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import dnd from "../assets/images/D&D.jpg";
 import dance from "../assets/images/dance.jpg";
+import creditCard from "../assets/images/creditCard.jpg";
 
 let ProjectsContent = [
+  {
+    image: creditCard,
+    title: "Animated Credit Card Form",
+    url: "https://animated-credit-card.netlify.app/",
+    imgText: "Shut up and take my money!",
+    technologies: "Framer-Motion, Reactstrap",
+    description: `Saw this challenge on a  
+    <a 
+      href='https://medium.com/better-programming/here-are-6-frontend-challenges-to-code-9952190c97cc' 
+      target='_blank'
+      rel='noopener noreferrer'
+    >Medium</a>
+    article and wanted to try making it from scratch. The app is a fun credit card form that has 
+    microinteractions with the user in the form of card-type detection, animations, and dynamic 
+    number formatting.`,
+  },
   {
     image: dance,
     title: "Dance Judge App",
