@@ -5,13 +5,6 @@ import Scrollspy from "react-scrollspy";
 export default function Header() {
   const [menuOpen, menuToggle] = useState(false);
 
-  function menuTrigger() {
-    document.querySelector(".header-wrapper").classList.toggle("menu-open");
-  }
-  function CloseMenuTrigger() {
-    document.querySelector(".header-wrapper").classList.remove("menu-open");
-  }
-
   return (
     <header className='header-area formobile-menu header--fixed default-color'>
       <div
