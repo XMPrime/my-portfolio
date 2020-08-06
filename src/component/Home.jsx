@@ -12,7 +12,7 @@ export default function Home() {
       category: "",
       title: "Hi, I'm Jason Chen",
       description:
-        "I'm a self-taught front-end web developer that's always looking to improve and grow",
+        "I'm a self-taught front-end web developer that's always looking to improve and grow!",
       buttonText: "Check out my work",
       buttonLink: "#projects",
     },
