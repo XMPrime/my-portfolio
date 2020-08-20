@@ -1,25 +1,62 @@
 import React, { Component } from "react";
 // import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import dnd from "../assets/images/D&D.jpg";
+// import dnd from "../assets/images/D&D.jpg";
 import dance from "../assets/images/dance.jpg";
 import creditCard from "../assets/images/creditCard.jpg";
+import jeopardy from "../assets/images/jeopardy.jpg";
 
 let ProjectsContent = [
+  {
+    image: jeopardy,
+    title: "JavaScript Quiz",
+    url: "https://quiz-scraper.netlify.app/",
+    imgText: "I'll take JavaScript for $1000, Alex!",
+    technologies: "",
+    description: [
+      `<b>What I learned:</b> TypeScript, Puppeteer, Netlify Functions, Styled-Components, PrismJS,
+      how to get around CORS...`,
+      `I used 
+        <a
+          href='https://github.com/puppeteer/puppeteer'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Puppeteer</a>
+      to scrape 
+        <a
+          href='https://www.instagram.com/theavocoder/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Lydia Hallie's</a>
+      awesome list of JavaScript questions from her 
+        <a
+          href='https://github.com/lydiahallie/javascript-questions'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Github repo</a> 
+      and transformed that data into a simple fullstack quiz application. Thanks to Netlify 
+      Functions, I was able to run Puppeteer as a serverless backend and React from the front. 
+      I also decided to learn TypeScript and code the entire project with it as an extra challenge.`,
+    ],
+  },
   {
     image: creditCard,
     title: "Animated Credit Card Form",
     url: "https://animated-credit-card.netlify.app/",
     imgText: "Shut up and take my money!",
-    technologies: "React, JavaScript, Framer-Motion, Reactstrap",
-    description: `Saw this challenge on a  
-    <a 
-      href='https://medium.com/better-programming/here-are-6-frontend-challenges-to-code-9952190c97cc' 
-      target='_blank'
-      rel='noopener noreferrer'
-    >Medium</a>
-    article and wanted to try making it from scratch. The app is a fun credit card form that has 
-    microinteractions with the user in the form of card-type detection, animations, and dynamic 
-    number formatting. Mobile-friendly too.`,
+    technologies: "",
+    description: [
+      `<b>What I learned:</b> Framer-Motion, CSS animation, Reactstrap`,
+      `Saw this challenge on a
+        <a
+          href='https://medium.com/better-programming/here-are-6-frontend-challenges-to-code-9952190c97cc'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Medium article</a>
+      and wanted to try making it from scratch. The app is a fun credit card form that has
+      micro-interactions with the user in the form of card-type detection, animations, and dynamic
+      number formatting. I also gave Reactstrap a try for the styling, but didn't find it particular 
+      interesting or useful.`,
+    ],
   },
   {
     image: dance,
@@ -27,39 +64,44 @@ let ProjectsContent = [
     url: "https://dance-judge.netlify.app/",
     imgText: "Show me your moves!",
     technologies: "React, Redux, JavaScript, Axios",
-    description: `A replication of a real-world application called 
-    <a 
-      href='https://coda.breakthefloor.com/' 
-      target='_blank'
-      rel='noopener noreferrer'
-    >CODA</a>
-     by Break The Floor Productions. The app is designed to assist judges in giving 
-    critiques for dance performances. To accomplish this, the app makes GET and POST 
-    requests to 
-    <a 
-      href='https://dance360.com/' 
-      target='_blank'
-      rel='noopener noreferrer'>Dance360</a>'s 
-    API to retreive dance event data, populate the user interface, 
-    and submit scoring breakdowns to Dance360's database.`,
+    description: [
+      `<b>What I learned:</b> React, React Hook Form, Redux, ES6, ESLint, Axios, Moment.js`,
+      `A replication of a real-world application called
+        <a
+          href='https://coda.breakthefloor.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >CODA</a>
+      by Break The Floor Productions. The app is designed to assist judges in giving
+      critiques for dance performances. To accomplish this, the app makes requests to
+        <a
+          href='https://dance360.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Dance360</a>
+      's API to populate the user interface and submit scoring breakdowns to it's database.`,
+      `With the help of my mentor, who works for Break The Floor Productions, I was able to
+      complete my first major coding project. Making this app solidified my understanding of the
+      core features of React, Redux, JavaScript, HTML, and CSS.`,
+    ],
   },
-  {
-    image: dnd,
-    title: "Responsive D&D Character Sheet",
-    url: "https://responsive-5e-character-sheet.netlify.app/",
-    imgText: "Roll for initiative!",
-    technologies: "React, Redux, JavaScript",
-    description: `This app started as an exercise in mobile-first design and responsive 
-    layouts by rearranging the official 
-    <a 
-      href='https://media.wizards.com/2015/downloads/dnd/DDALRoD_CharacterSheet.pdf' 
-      target='_blank'
-      rel='noopener noreferrer'
-    >character sheet</a> for Dungeons & Dragons 5<sup>th</sup> Edition. As of now, I am 
-    expanding its functionality to be able to replace a pen & paper character sheet. The 
-    end goal is to implement a backend with a RESTful API that contains user data and rule 
-    references.`,
-  },
+  // {
+  //   image: dnd,
+  //   title: "Responsive D&D Character Sheet",
+  //   url: "https://responsive-5e-character-sheet.netlify.app/",
+  //   imgText: "Roll for initiative!",
+  //   technologies: "React, Redux, JavaScript",
+  //   description: `This app started as an exercise in mobile-first design and responsive
+  //   layouts by rearranging the official
+  //   <a
+  //     href='https://media.wizards.com/2015/downloads/dnd/DDALRoD_CharacterSheet.pdf'
+  //     target='_blank'
+  //     rel='noopener noreferrer'
+  //   >character sheet</a> for Dungeons & Dragons 5<sup>th</sup> Edition. As of now, I am
+  //   expanding its functionality to be able to replace a pen & paper character sheet. The
+  //   end goal is to implement a backend with a RESTful API that contains user data and rule
+  //   references.`,
+  // },
 ];
 
 class ProjectThumbnails extends Component {
@@ -71,7 +113,7 @@ class ProjectThumbnails extends Component {
           <div className={`${column}`} key={i}>
             <div className='content'>
               <h4 className='title'>{project.title}</h4>
-              <p className='technologies'>{project.technologies}</p>
+              {/* <p className='technologies'>{project.technologies}</p> */}
             </div>
             <div className='team'>
               <a
@@ -93,10 +135,12 @@ class ProjectThumbnails extends Component {
             </div>
             <br />
             <div className='content'>
-              <p
-                className='description'
-                dangerouslySetInnerHTML={{ __html: project.description }}
-              ></p>
+              {project.description.map((text) => (
+                <p
+                  className='description'
+                  dangerouslySetInnerHTML={{ __html: text }}
+                ></p>
+              ))}
             </div>
           </div>
         ))}
