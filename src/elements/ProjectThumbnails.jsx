@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-// import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 // import dnd from "../assets/images/D&D.jpg";
 import dance from "../assets/images/dance.jpg";
 import creditCard from "../assets/images/creditCard.jpg";
 import jeopardy from "../assets/images/jeopardy.jpg";
+import { FaGithub } from "react-icons/fa";
 
 let ProjectsContent = [
   {
@@ -11,7 +11,7 @@ let ProjectsContent = [
     title: "JavaScript Quiz",
     url: "https://quiz-scraper.netlify.app/",
     imgText: "I'll take JavaScript for $1000, Alex!",
-    technologies: "",
+    github: "https://github.com/XMPrime/javascript-quiz/",
     description: [
       `<b>What I learned:</b> TypeScript, Puppeteer, Netlify Functions, Styled-Components, PrismJS,
       how to get around CORS...`,
@@ -43,7 +43,7 @@ let ProjectsContent = [
     title: "Animated Credit Card Form",
     url: "https://animated-credit-card.netlify.app/",
     imgText: "Shut up and take my money!",
-    technologies: "",
+    github: "https://github.com/XMPrime/credit-card-form/",
     description: [
       `<b>What I learned:</b> Framer-Motion, CSS animation, Reactstrap`,
       `Saw this challenge on a
@@ -63,7 +63,7 @@ let ProjectsContent = [
     title: "Dance Judge App",
     url: "https://dance-judge.netlify.app/",
     imgText: "Show me your moves!",
-    technologies: "React, Redux, JavaScript, Axios",
+    github: "https://github.com/XMPrime/dance-360/",
     description: [
       `<b>What I learned:</b> React, React Hook Form, Redux, ES6, ESLint, Axios, Moment.js`,
       `A replication of a real-world application called
@@ -112,8 +112,16 @@ class ProjectThumbnails extends Component {
         {ProjectsContent.map((project, i) => (
           <div className={`${column}`} key={i}>
             <div className='content'>
-              <h4 className='title'>{project.title}</h4>
-              {/* <p className='technologies'>{project.technologies}</p> */}
+              <h4 className='project-header'>
+                <a href={project.github}>
+                  {project.title}
+                  <FaGithub className='github' />
+                </a>
+              </h4>
+              {/* <a className='project-header' href={project.github}>
+                <h4 className='title'>{project.title}</h4>
+                <FaGithub className='github' />
+              </a> */}
             </div>
             <div className='team'>
               <a
@@ -137,6 +145,7 @@ class ProjectThumbnails extends Component {
             <div className='content'>
               {project.description.map((text) => (
                 <p
+                  key={text}
                   className='description'
                   dangerouslySetInnerHTML={{ __html: text }}
                 ></p>

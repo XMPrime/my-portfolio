@@ -21,36 +21,6 @@ export default class Contact extends Component {
     };
   }
 
-  // formSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   this.setState({
-  //     buttonText: "...sending",
-  //   });
-
-  //   let data = {
-  //     name: this.state.name,
-  //     email: this.state.email,
-  //     subject: this.state.subject,
-  //     message: this.state.message,
-  //   };
-
-  //   axios
-  //     .post("/contact", data)
-  //     .then((res) => {
-  //       console.log("post request sent");
-  //       if (res.data.status === "success") {
-  //         console.log("Message Sent.");
-  //         // this.setState({ sent: true }, this.resetForm());
-  //       } else if (res.data.status === "fail") {
-  //         console.log("Message failed to send.");
-  //       }
-  //     })
-  //     .catch(() => {
-  //       console.log("Message not sent");
-  //     });
-  // };
-
   formSubmit = (e) => {
     fetch("/", {
       method: "POST",
@@ -127,23 +97,6 @@ export default class Contact extends Component {
                   <ContactForm />
                 </div>
               </div>
-              {/* <div className='col-lg-6 order-1 order-lg-2'>
-                <div className='thumbnail mb_md--30 mb_sm--30'>
-                  <ul className='social-share rn-x-lg-size d-flex justify-content-center liststyle'>
-                    {SocialShare.map((val, i) => (
-                      <li key={i}>
-                        <a
-                          href={`${val.link}`}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          {val.Social}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

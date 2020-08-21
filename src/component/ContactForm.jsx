@@ -23,7 +23,7 @@ export default function ContactForm() {
       placeholder: "Your message",
     },
   ].map((input) => (
-    <label htmlFor={input.name}>
+    <label key={input.name} htmlFor={input.name}>
       <input
         type={input.type}
         name={input.name}

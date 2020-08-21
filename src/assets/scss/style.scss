@@ -183,9 +183,10 @@ body {
 
 .content {
   margin-bottom: 1.2rem;
+
   a {
-    // color: blue;
     text-decoration: underline;
+    color: black;
 
     &:hover {
       color: #f9004d;
@@ -194,7 +195,7 @@ body {
   .title {
     margin-bottom: 0;
   }
-  .technologies {
+  .github {
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0;
@@ -203,5 +204,19 @@ body {
     line-height: normal;
     font-size: 1rem;
     margin-bottom: 0.7rem;
+  }
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+
+  > a {
+    text-decoration: none;
+  }
+
+  .github {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
   }
 }

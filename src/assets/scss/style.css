@@ -16684,8 +16684,13 @@ body {
   font-size: 2rem;
 }
 
+.content {
+  margin-bottom: 1.2rem;
+}
+
 .content a {
   text-decoration: underline;
+  color: black;
 }
 
 .content a:hover {
@@ -16696,7 +16701,7 @@ body {
   margin-bottom: 0;
 }
 
-.content .technologies {
+.content .github {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -16705,5 +16710,24 @@ body {
 .content .description {
   line-height: normal;
   font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.project-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-header > a {
+  text-decoration: none;
+}
+
+.project-header .github {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
