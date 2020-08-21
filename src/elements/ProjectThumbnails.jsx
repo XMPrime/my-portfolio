@@ -113,7 +113,11 @@ class ProjectThumbnails extends Component {
           <div className={`${column}`} key={i}>
             <div className='content'>
               <h4 className='project-header'>
-                <a href={project.github}>
+                <a
+                  href={project.github}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   {project.title}
                   <FaGithub className='github' />
                 </a>
