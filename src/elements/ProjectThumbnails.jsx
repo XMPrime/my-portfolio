@@ -122,9 +122,6 @@ let ProjectsContent = [
           rel='noopener noreferrer'
         >Dance360's</a>
       API to populate the user interface and submit scoring breakdowns to its database.`,
-      `With the help of my mentor, who works for Break The Floor Productions, I was able to
-      complete my first major coding project. Making this app solidified my understanding of the
-      core features of React, Redux, JavaScript, HTML, and CSS.`,
     ],
   },
   // {
