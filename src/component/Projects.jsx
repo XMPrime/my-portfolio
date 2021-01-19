@@ -1,5 +1,5 @@
-import React from "react";
-import ProjectThumbnails from "../elements/ProjectThumbnails";
+import React from 'react';
+import ProjectThumbnails from '../elements/ProjectThumbnails';
 
 export default function Projects() {
   return (

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Particles from "react-particles-js";
+import React, { useState, useEffect } from 'react';
+import Particles from 'react-particles-js';
 
 export default function Home() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1200);
@@ -8,13 +8,12 @@ export default function Home() {
   };
   const homeParams = [
     {
-      textPosition: "text-center",
-      category: "",
+      textPosition: 'text-center',
+      category: '',
       title: "Hi, I'm Jason Chen",
-      description:
-        "I'm a self-taught front-end web developer that's always looking to improve and grow!",
-      buttonText: "Check out my work",
-      buttonLink: "#projects",
+      description: "I'm a software engineer that always has a growth mindset!",
+      buttonText: 'Check out my work',
+      buttonLink: '#projects',
     },
   ];
 
@@ -30,10 +29,10 @@ export default function Home() {
       line_linked: {
         enable: true,
         opacity: 0.2,
-        color: "#ffffff",
+        color: '#ffffff',
       },
       move: {
-        direction: "right",
+        direction: 'right',
         speed: 0.15,
       },
       size: {
@@ -51,11 +50,11 @@ export default function Home() {
       events: {
         onclick: {
           enable: true,
-          mode: "push",
+          mode: 'push',
         },
         onhover: {
           enable: true,
-          mode: "repulse",
+          mode: 'repulse',
         },
       },
       modes: {
@@ -68,7 +67,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", displayParticles);
+    window.addEventListener('resize', displayParticles);
   });
 
   return (
@@ -89,16 +88,16 @@ export default function Home() {
               <div className='row'>
                 <div className='col-lg-12'>
                   <div className={`inner ${value.textPosition}`}>
-                    {value.category ? <span>{value.category}</span> : ""}
+                    {value.category ? <span>{value.category}</span> : ''}
                     {value.title ? (
                       <h1 className='title theme-gradient'>{value.title}</h1>
                     ) : (
-                      ""
+                      ''
                     )}
                     {value.description ? (
                       <p className='description'>{value.description}</p>
                     ) : (
-                      ""
+                      ''
                     )}
                   </div>
                 </div>
@@ -114,7 +113,7 @@ export default function Home() {
                 </a>
               </div>
             ) : (
-              ""
+              ''
             )}
           </div>
         ))}
