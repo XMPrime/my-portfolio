@@ -30,7 +30,7 @@ let ProjectsContent = [
     title: 'SSSnip',
     url:
       'https://drive.google.com/file/d/1KVNjiXTRgUsppdgTpooH5E7cVsScFWca/view?usp=sharing',
-    imgText: 'Just point and click',
+    imgText: 'Simply point and click =)',
     github: 'https://github.com/XMPrime/targeted-screen-capture',
     description: [
       `<b>What I learned:</b> Electron, JSZip`,
