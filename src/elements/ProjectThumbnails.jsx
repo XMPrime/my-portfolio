@@ -26,6 +26,30 @@ let ProjectsContent = [
     ],
   },
   {
+    image: dance,
+    title: 'Dance Judge App',
+    url: 'https://dance-judge.netlify.app/',
+    imgText: 'Show me your moves!',
+    github: 'https://github.com/XMPrime/dance-360/',
+    description: [
+      `<b>What I learned:</b> React, React Hook Form, Redux, ES6, ESLint, Axios, Moment.js`,
+      `A replication of a real-world application called
+        <a
+          href='https://coda.breakthefloor.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >CODA</a>
+      by Break The Floor Productions. The app is designed to assist judges in giving
+      critiques for dance performances. To accomplish this, the app makes requests to
+        <a
+          href='https://dance360.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Dance360's</a>
+      API to populate the user interface and submit scoring breakdowns to its database.`,
+    ],
+  },
+  {
     image: SSSnip,
     title: 'SSSnip',
     url:
@@ -100,30 +124,7 @@ let ProjectsContent = [
       interesting or useful.`,
     ],
   },
-  {
-    image: dance,
-    title: 'Dance Judge App',
-    url: 'https://dance-judge.netlify.app/',
-    imgText: 'Show me your moves!',
-    github: 'https://github.com/XMPrime/dance-360/',
-    description: [
-      `<b>What I learned:</b> React, React Hook Form, Redux, ES6, ESLint, Axios, Moment.js`,
-      `A replication of a real-world application called
-        <a
-          href='https://coda.breakthefloor.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >CODA</a>
-      by Break The Floor Productions. The app is designed to assist judges in giving
-      critiques for dance performances. To accomplish this, the app makes requests to
-        <a
-          href='https://dance360.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >Dance360's</a>
-      API to populate the user interface and submit scoring breakdowns to its database.`,
-    ],
-  },
+
   // {
   //   image: dnd,
   //   title: "Responsive D&D Character Sheet",
