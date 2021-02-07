@@ -79,7 +79,7 @@ let ProjectsContent = [
     title: 'JavaScript Quiz',
     url: 'https://quiz-scraper.netlify.app/',
     imgText: "I'll take JavaScript for $1000, Alex!",
-    github: 'https://github.com/XMPrime/javascript-quiz/',
+    github: 'https://github.com/XMPrime/js-quiz',
     description: [
       `<b>Tech Stack:</b> TypeScript, Puppeteer, React, Netlify Functions, styled-components, PrismJS`,
       `I used Puppeteer to scrape
