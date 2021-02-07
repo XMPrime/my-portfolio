@@ -1,5 +1,5 @@
-import React from "react";
-import aboutImage from "../assets/images/giant_naan.jpeg";
+import React from 'react';
+import aboutImage from '../assets/images/giant_naan.jpeg';
 
 export default function About() {
   return (
@@ -43,9 +43,9 @@ export default function About() {
                     <div className='about-us-list'>
                       <h3 className='title'>Boardgames</h3>
                       <p>
-                        Terraforming Mars, Castles of Mad King Ludwig, and The
-                        Resistance: Avalon are among some of my favorites, but
-                        I'm always down to play anything!
+                        Root, Terraforming Mars, Castles of Mad King Ludwig, and
+                        The Resistance: Avalon are among some of my favorites,
+                        but I'm always down to play anything!
                       </p>
                     </div>
                   </div>
