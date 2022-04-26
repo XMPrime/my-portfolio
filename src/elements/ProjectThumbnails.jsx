@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import dance from '../assets/images/dance.jpg';
 import creditCard from '../assets/images/creditCard.jpg';
 import jeopardy from '../assets/images/jeopardy.jpg';
-import target from '../assets/images/target.webp';
 import sdc from '../assets/images/sdc.jpg';
 // import tft from '../assets/images/tft.png';
 import pengu from '../assets/images/pengu.jpg';
