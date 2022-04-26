@@ -36,22 +36,6 @@ let ProjectsContent = [
     ],
   },
   {
-    image: target,
-    title: 'Targét',
-    url: 'http://13.57.232.156:3001/12/',
-    imgText: "It's pronounced Tar · zhay~.",
-    github: 'https://github.com/CodingChefsFEC/hrsjo2-FEC-product-overview',
-    description: [
-      `<b>Tech Stack:</b> React, AWS, Express, MongoDB, Webpack, styled-compoonents`,
-      `My team and I recreated Target's product page by creating 3 different microservices and linking them together via a proxy server. This is my portion which includes the image zoom, image carousel modal, and star ratings modal React components. I utilized styled-components to meticulously replicate the CSS styling of Target’s product page (<a
-        href='https://www.target.com/p/7-wonders-board-game/-/A-14203909'
-        target='_blank'
-        rel='noopener noreferrer'
-      >for comparison</a>)· I then created a script to generate and seed 100 randomly generated products on MongoDB. Each of these products can be viewed thanks to dynamically configured API endpoints which query the database by their respective ID numbers.
-      .`,
-    ],
-  },
-  {
     image: sdc,
     title: 'Adidas Product & Inventory',
     url: 'https://github.com/Albert-Friends-The-SQL/Side-Bar',
@@ -65,8 +49,7 @@ let ProjectsContent = [
   {
     image: pengu,
     title: 'Targeted Screen Capture',
-    url:
-      'https://drive.google.com/file/d/1KVNjiXTRgUsppdgTpooH5E7cVsScFWca/view?usp=sharing',
+    url: 'https://drive.google.com/file/d/1KVNjiXTRgUsppdgTpooH5E7cVsScFWca/view?usp=sharing',
     imgText: 'Must. Resist. Donkey rolling...',
     github: 'https://github.com/XMPrime/targeted-screen-capture',
     description: [
